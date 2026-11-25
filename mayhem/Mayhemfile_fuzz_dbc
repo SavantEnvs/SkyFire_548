@@ -1,0 +1,11 @@
+project: savantenvs/SkyFire_548
+target: fuzz_dbc
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dbc/testsuite
+
+cmds:
+  - cmd: /mayhem/build-mayhem/fuzz_dbc
+    libfuzzer: true
+    timeout: 5
